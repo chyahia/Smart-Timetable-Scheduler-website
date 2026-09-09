@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Timetable Scheduler | نظام الجدولة الجامعية الذكي</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e67e22;
+            --bg-light: #f8f9fa;
+            --mediafire: #007CAF; /* لون زر ميديافاير */
+            --portable: #e74c3c; /* لون زر النسخة المحمولة */
+        }
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary), #1a252f);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        h1 { font-size: 3.5rem; margin: 0 0 10px 0; font-weight: 900; }
+        .subtitle { font-size: 1.5rem; color: #bdc3c7; margin-bottom: 40px; }
+        
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-align: center;
+            justify-content: center;
+        }
+        .btn:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .btn-primary { background-color: var(--secondary); color: white; }
+        .btn-github { background-color: #333; color: white; }
+        .btn-mediafire { background-color: var(--mediafire); color: white; }
+        .btn-portable { background-color: var(--portable); color: white; }
+        
+        /* زر بحجم أصغر للبطاقات السفلية */
+        .btn-sm {
+            padding: 10px 15px;
+            font-size: 1rem;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+        
+        .video-section {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: -40px auto 40px auto;
+            max-width: 800px;
+            position: relative;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* نسبة 16:9 */
+            height: 0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            border-top: 5px solid var(--secondary);
+        }
+        .feature-card h3 { color: var(--primary); font-size: 1.5rem; }
+        .icon { font-size: 3rem; margin-bottom: 15px; }
+
+        /* تنسيقات قسم التحميلات الإضافية */
+        .downloads-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        .download-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--primary);
+            display: flex;
+            flex-direction: column;
+        }
+        .download-card h3 {
+            color: var(--primary);
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        .download-desc {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        .download-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: var(--primary);
+            color: white;
+            margin-top: 50px;
+        }
+        footer a { color: var(--secondary); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Smart Timetable Scheduler</h1>
+        <div class="subtitle">نظام الجدولة الجامعية الذكي</div>
+        
+        <div class="btn-container">
+            <a href="https://github.com/chyahia/Smart-Timetable-Scheduler/releases/download/V2.0/Timetable_Setup_v2.exe" target="_blank" class="btn btn-primary">
+                ⬇️ تحميل البرنامج (Windows)
+            </a>
+            <a href="https://github.com/chyahia/Smart-Timetable-Scheduler" target="_blank" class="btn btn-github">
+                💻 عرض المصدر (GitHub)
+            </a>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- قسم الفيديو -->
+        <div class="video-section">
+            <h2 style="text-align: center; color: var(--primary); margin-top: 0;">شرح شامل للبرنامج</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/NE-BT2h9qpQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- قسم روابط ونسخ التحميل الإضافية -->
+        <h2 style="text-align: center; color: var(--primary); font-size: 2rem; margin-top: 70px;">نسخ وروابط أخرى للتحميل</h2>
+        <div class="downloads-grid">
+            
+            <!-- النسخة 1: الجداول الدراسية فقط -->
+            <div class="download-card">
+                <h3>⚡ نسخة الجداول الدراسية فقط</h3>
+                <div class="download-desc">
+                    نسخة خفيفة ومباشرة تتضمن الجداول الدراسية فقط (بدون الامتحانات)، وتخلو من صفحة رمز الدخول لسرعة الوصول.
+                </div>
+                <div class="download-links">
+                    <a href="https://github.com/chyahia/Smart-Timetable-Scheduler/releases/download/V2.0/Timetable_Setup_v2.exe" target="_blank" class="btn btn-sm btn-github">💻 تحميل التثبيت (GitHub)</a>
+                    <a href="https://www.mediafire.com/file/2hioubbl91bc7zg/Timetable_Setup_v2.exe/file" target="_blank" class="btn btn-sm btn-mediafire">📥 تحميل التثبيت (MediaFire)</a>
+                    <a href="https://www.mediafire.com/file/0f1t6js15x6gpou/Smart_Timetable_Scheduler.zip/file" target="_blank" class="btn btn-sm btn-portable">💼 تحميل النسخة المحمولة (بدون تثبيت)</a>
+                </div>
+            </div>
+            
+            <!-- النسخة 2: الشاملة عربي فقط -->
+            <div class="download-card">
+                <h3>🇦🇪 النسخة الشاملة (عربي فقط)</h3>
+                <div class="download-desc">
+                    نسخة مطابقة للنسخة الشاملة بكامل وحداتها الثلاثة، ولكنها مخصصة بواجهة تدعم اللغة العربية فقط.
+                </div>
+                <div class="download-links">
+                    <a href="https://github.com/chyahia/UniPlan-SaaS/releases/download/3.0/UniPlan-SaaS_v3.exe" target="_blank" class="btn btn-sm btn-github">💻 تحميل التثبيت (GitHub)</a>
+                    <a href="https://www.mediafire.com/file/avuk8wdxyp1psm2/UniPlan-SaaS_v3.exe/file" target="_blank" class="btn btn-sm btn-mediafire">📥 تحميل التثبيت (MediaFire)</a>
+                    <a href="https://www.mediafire.com/file/fyzlxnanl70z1lh/UniPlan-SaaS.zip/file" target="_blank" class="btn btn-sm btn-portable">💼 تحميل النسخة المحمولة (بدون تثبيت)</a>
+                </div>
+            </div>
+
+            <!-- النسخة 3: الشاملة متعددة اللغات (روابط إضافية) -->
+            <div class="download-card">
+                <h3>🌐 النسخة الشاملة (متعددة اللغات)</h3>
+                <div class="download-desc">
+                    النسخة الكاملة التي تحتوي على البرامج الثلاثة (الجداول، السداسية، الاستدراكية) وتدعم اللغتين العربية والإنجليزية.
+                </div>
+                <div class="download-links">
+                    <a href="https://github.com/chyahia/UniPlan-SaaS-Multilingual/releases/download/0.4/UniPlan-SaaS-Multilingual.exe" target="_blank" class="btn btn-sm btn-github">💻 تحميل التثبيت (GitHub)</a>
+                    <a href="https://www.mediafire.com/file/jprhvvp2oulnfmj/UniPlan-SaaS-Multilingual.exe/file" target="_blank" class="btn btn-sm btn-mediafire">📥 رابط إضافي (MediaFire)</a>
+                    <a href="https://www.mediafire.com/file/99jioorouvemyoo/UniPlan-SaaS.zip/file" target="_blank" class="btn btn-sm btn-portable">💼 تحميل النسخة المحمولة (بدون تثبيت)</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>هذا النظام متاح مجاناً للاستخدام الأكاديمي تحت رخصة <strong>CC BY-NC 4.0</strong> (يُمنع الاستخدام التجاري).</p>
+        <p>تم التطوير بواسطة <strong>د. شعيب يحيى</strong> | <a href="https://github.com/chyahia" target="_blank">GitHub</a></p>
+    </footer>
+
+</body>
+</html>
